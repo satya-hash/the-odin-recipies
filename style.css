@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,300&display=swap");
+
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #2f4858;
+	font-family: "Open Sans", sans-serif;
+}
+
+main {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+h1 {
+	font-family: "Ubuntu", sans-serif;
+	color: #aa8e18;
+
+	text-align: center;
+}
+
+/* Main page Styles */
+
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+	justify-content: center;
+	align-items: center;
+}
+
+.cards .card {
+	width: 300px;
+	position: relative;
+	text-align: center;
+	overflow: hidden;
+	border-radius: 1rem;
+}
+
+.cards .card img {
+	aspect-ratio: 1/1;
+	width: 100%;
+
+	object-fit: cover;
+}
+
+.cards .card #hide {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	font-size: 24px;
+	border-radius: 1rem;
+
+	background-color: rgba(0, 0, 0, 0.621);
+	color: #aa8e18;
+	position: absolute;
+	height: 50%;
+	width: 100%;
+	top: 100%;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.cards .card:hover #hide {
+	top: 50%;
+}
